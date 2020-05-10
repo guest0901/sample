@@ -1,0 +1,14 @@
+<h1>Message#index</h1>
+<p>Find me in app/views/messages/index.html.erb</p>
+
+<%= @messages.to_json %>
+  <%= link_to("新規投稿", new_message_path) %>
+
+<ul>
+<% @messages.each do |message| %>
+<li><%= link_to(message.title, message_path(id: message.id)) %></li>
+<% end %>
+</ul>
+
+
+

@@ -1,0 +1,8 @@
+<h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+<%= @posts.to_json %>
+<%= form_with model: Post.new, local: true do |form| %>
+  <%= form.text_field :message %>
+  <%= form.submit %>
+  <%= link_to("新規投稿", "/posts/new") %>
+<% end %>
